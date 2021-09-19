@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login form</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300&family=Playfair+Display:ital@0;1&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Serif JP', serif;
+  background-image: url('log1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+ 
+ }
+ @media only screen and (max-width: 767px) {
+  body {
+    background-image: url(log1.jpg);
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 352){
+  body{
+    background-image: url(log1.jpg);
+    background-size: cover;
+  }
+
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  height: 55%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 40rem;
+  padding: 2.5rem;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 0.6rem;
+}
+@media screen and (max-width: 732px){
+  .box{
+    height: 55%;
+
+  }
+
+}
+@media screen and (min-width: 326px){
+  .box{
+    height: 55%;
+	margin-left: 40px;
+  }
+}
+
+.box h2 {
+  font-size: 40px;
+  margin: 0 0 1.875rem;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.box .inputBox {
+  position: relative;
+  padding-top: 20px;
+}
+
+.box .inputBox input {
+  width: 100%;
+  padding-top: 20px;
+  
+  font-size: 1rem;
+  color: #fff;
+  letter-spacing: 0.062rem;
+  margin-bottom: 1.875rem;
+  border: none;
+  border-bottom: 0.065rem solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.box .inputBox label {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  padding: 0.625rem 0;
+  font-size: 2rem;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+
+
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label,
+.box .inputBox input:not([value=""]) ~ label {
+  top: -1.125rem;
+  left: 0;
+  color: #eb5d1e;
+  font-size: 0.75rem;
+}
+.but{
+  text-align: center;
+}
+.but h5{
+  font-size: 17px;
+  color: #fff;
+}
+.button {
+  background-color: #eb5d1e;
+  
+  border: none;
+  color: white;
+  padding: 13px;
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: center;
+  float: center;
+  margin-left: 50px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+
+
+.button {border-radius: 8px;}
+
+.button:hover {
+  background-color: #f5ab8a;
+}
+</style>
+</head>
+<body>
+<div class="box">
+<h2><b>Login</b></h2>
+<form method="get" action="user_registration_script.php">
+<div class="inputBox">
+  <input type="email" name="email" required onkeyup="this.setAttribute('value', this.value);"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" value="">
+    <label>Email</label>
+</div>
+<div class="inputBox">
+    <input type="password" name="password" required value=""
+             onkeyup="this.setAttribute('value', this.value);"
+             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+             title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+    <label>Password</label>
+</div>
+<p style="text-align: right;"><a href="pass.html">Forgot Password?</a></p>
+<div class="but">
+<button class="button button">Submit</button>
+
+<h5 style="text-align: center;">Don't have account ? <a href="signup.html">Signup now</a></h5>
+</div>
+</form>
+
+
+</div>
+</body>
+</html>
